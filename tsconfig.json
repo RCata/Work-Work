@@ -1,10 +1,19 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "paths": {
+      "core-js/es7/reflect": [
+          "../node_modules/core-js/proposals/reflect-metadata"
+      ],
+      "@angular/*": ["../node_modules/@angular/*"],
+      "rxjs/*": ["../node_modules/rxjs/*"],
+      "rxjs": ["../node_modules/rxjs/"],
+      "ngx-webstorage": ["../node_modules/ngx-webstorage/"],
+    },
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "declaration": false,
+    "declaration": false, 
     "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
